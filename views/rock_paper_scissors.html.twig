@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rock-Paper-Scissors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    </head>
+    <body>
+        {% if games is empty %}
+        <h1>Enter Players to begin!</h1>
+            <form action="/add_players">
+                <div class="input-field">
+                    <label for="player1">Enter Player1:</label>
+                    <input type="text" name="player1" id="player1">
+                </div>
+                <div class="input-field">
+                    <label for="player2">Enter Player2:</label>
+                    <input type="text" name="player2" id="player2">
+                </div>
+                <button type="submit" class="btn">Add Players</button>
+            </form>
+        {% else %}
+        <h3></h3>
+        {% endif %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    </body>
+</html>

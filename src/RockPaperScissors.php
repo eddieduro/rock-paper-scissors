@@ -17,5 +17,12 @@
                 return $draw;
             }
         }
+        static function getAll(){
+            return $_SESSION['list_of_games'];
+        }
+
+        function save(){
+			array_push($_SESSION['list_of_games'], $this);
+		}
     }
 ?>
