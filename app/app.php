@@ -21,7 +21,10 @@
         $player1 = $_GET['player1'];
         $player2 = $_GET['player2'];
         $new_game->save();
-        return $app['twig']->render('players_created.html.twig',array('player1'=>$player1, 'player2'=> $player2));
+        return $app['twig']->render('players_created.html.twig',array(
+            'player1'=>$player1,
+            'player2'=> $player2
+            ));
     });
     return $app;
 ?>
